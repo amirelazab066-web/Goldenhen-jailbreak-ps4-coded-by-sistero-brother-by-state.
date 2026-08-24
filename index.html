@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/><meta content="telephone=no" name="format-detection"/><title></title><script src="//img0.didiglobal.com/static/soda_static/common/soda.js"></script><script>var host = location.host
+      var is99App = !!host.match('99app.com')
+      var appKey = is99App ? 'omega0881eb0b9b' : 'omegade3f1b0a84'
+      var isPre = host.indexOf('pre.') !== -1 || host.indexOf('pre-') !== -1
+      var isOnline =
+        host.indexOf('c-h5.didi-food.com') !== -1 || host.indexOf('food-c-h5.99app.com') !== -1
+
+      var Omega = window.Omega || {
+        appKey: appKey,
+        uploadHost: 'omgup.didiglobal.com',
+        autoPosition: false,
+        autoError: isOnline || isPre, // 预发和线上环境开启mas错误上报
+        jankMonitor: {
+          type: 'onevent', // 卡顿间隔检测(onevent):在页面触发’click’或’keydown’后的某段时间内进行检测。
+          jankFPSCount: 24, // 每秒卡顿帧率[0,60]，建议24
+        },
+        crashMonitor: {
+          type: 'onevent',
+          crashTime: 15000, // 主线程超过多少毫秒没有进行响应，就判定为页面崩溃，最小6000。
+        },
+        // 白屏监控
+        autoWhiteScreenMonitor: {
+          container: '#app',
+          durationSeconds: 20000, // 页面白屏检测时间间隔，设定20s
+          childrenDepth: 2, // 白屏检测子节点深度
+        },
+        // 静态资源加载错误监控
+        autoResourceError: {
+          // 资源的nodeName
+          staticResourceType: ['IMG', 'SCRIPT', 'LINK'],
+          staticResourceFilterKeys: ['localhost'],
+        },
+      }
+      window.Omega = Omega</script><script crossorigin="Anonymous" src="//tracker.didiglobal.com/static/tracker_global/latest3x/omega.min.js"></script><script src="//img1.didiglobal.com/static/apollo_global_js/apollo.global.min.js" defer="defer"></script><script defer="defer" src="https://img0.didiglobal.com/static/soda_static/c/app/js/6646.43e9a51a.js"></script><script defer="defer" src="https://img0.didiglobal.com/static/soda_static/c/app/js/coupon-vendors.0039a70c.js"></script><script defer="defer" src="https://img0.didiglobal.com/static/soda_static/c/app/js/7103.d3674451.js"></script><script defer="defer" src="https://img0.didiglobal.com/static/soda_static/c/app/js/i18n.0050fde3.js"></script><script defer="defer" src="https://img0.didiglobal.com/static/soda_static/c/app/js/commonChunk.e912403a.js"></script><script defer="defer" src="https://img0.didiglobal.com/static/soda_static/c/app/js/539.2f893057.js"></script><script defer="defer" src="https://img0.didiglobal.com/static/soda_static/c/app/js/3428.db61d82f.js"></script><script defer="defer" src="https://img0.didiglobal.com/static/soda_static/c/app/js/index.696ff2d5.js"></script><link href="https://img0.didiglobal.com/static/soda_static/c/app/css/6646.0c43cfc3.css" rel="stylesheet"><link href="https://img0.didiglobal.com/static/soda_static/c/app/css/coupon-vendors.97d51a6c.css" rel="stylesheet"><link href="https://img0.didiglobal.com/static/soda_static/c/app/css/7103.a350d635.css" rel="stylesheet"><link href="https://img0.didiglobal.com/static/soda_static/c/app/css/index.f392080e.css" rel="stylesheet"></head><body ontouchstart=""><div id="app"></div></body></html>
